@@ -16,8 +16,4 @@
     "url": "https://github.com/xuedafei/demos/issues"
   },
   "homepage": "https://github.com/xuedafei/demos#readme",
-  "devDependencies": {
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
-  }
 }
