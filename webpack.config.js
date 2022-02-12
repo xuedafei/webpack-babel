@@ -10,6 +10,7 @@ module.exports = {
     filename: 'bundle-[fullhash].js'
   },
   mode: 'none',
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -53,5 +54,11 @@ module.exports = {
       title: '呵呵呵',
       template: path.resolve(__dirname, 'src/index.html')
     })
-  ]
+  ],
+  devServer: {
+    open: true,
+    hot: true,
+    compress: true,
+    port: 9000,
+  },
 };
