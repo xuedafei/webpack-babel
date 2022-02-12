@@ -5,9 +5,7 @@ import catImg from './img/cat.jpeg';
 console.log('dogImg', dogImg);
 console.log('catImg', catImg);
 const add = (a, b) =>  a + b;
-console.log(add(1, 22));
-console.log('aa',a);
-console.log('aa name from c', name);
+console.log('>>>', NODE_ENV)
 
 window.onload = function() {
   document.getElementById('img1').innerHTML = `<img src=${dogImg} />`;

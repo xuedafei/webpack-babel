@@ -1,10 +1,10 @@
 
 .hello {
-  color: blue;
+  color: blue!important;
   width: 300px;
   height: 300px;
   border: 1px solid red;
-  background: url(./dog.jpeg);
+  background-image: url(./dog.jpeg);
 }
 
 h1 {

@@ -2,6 +2,8 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/a.js',
@@ -15,7 +17,8 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
         test: /\.js$/,
@@ -53,6 +56,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: '呵呵呵',
       template: path.resolve(__dirname, 'src/index.html')
+    }),
+    new webpack.DefinePlugin({
+      NODE_ENV: "'development'"
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name]-[contenthash:8].css',
+      chunkFilename: '[id].css'
     })
   ],
   devServer: {
